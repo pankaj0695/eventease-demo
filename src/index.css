@@ -1,0 +1,115 @@
+:root {
+  --navy: #17252a;
+  --teal: #2b7a78;
+  --aqua: #67d0cb;
+  --mint: #def2f1;
+  --frost: #feffff;
+
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: var(--teal);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+a:hover {
+  color: var(--aqua);
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: "Inter", "Avenir", Helvetica, Arial, sans-serif;
+  background: linear-gradient(120deg, var(--mint) 0%, var(--frost) 100%);
+  color: var(--navy);
+  transition: background 0.4s;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--navy);
+  font-family: "Inter", "Avenir", Helvetica, Arial, sans-serif;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid var(--teal);
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: var(--teal);
+  color: var(--mint);
+  cursor: pointer;
+  transition: background 0.25s, color 0.25s, border-color 0.25s;
+}
+button:hover {
+  background-color: var(--aqua);
+  color: var(--navy);
+  border-color: var(--navy);
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  background: var(--mint);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--teal);
+  border-radius: 8px;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --navy: #def2f1;
+    --teal: #3aafa9;
+    --aqua: #2b7a78;
+    --mint: #17252a;
+    --frost: #222;
+  }
+  body {
+    background: linear-gradient(120deg, var(--navy) 0%, var(--teal) 100%);
+    color: var(--mint);
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: var(--mint);
+  }
+}

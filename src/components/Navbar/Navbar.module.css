@@ -1,0 +1,183 @@
+.navbar {
+  width: 100%;
+  height: 64px;
+  box-sizing: border-box;
+  background: linear-gradient(90deg, var(--navy) 0%, var(--teal) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2.5rem;
+  box-shadow: 0 4px 16px rgba(23, 37, 42, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  animation: navbarFadeIn 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes navbarFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.logo {
+  height: 40px;
+  width: 40px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(23, 37, 42, 0.1);
+  background: var(--frost);
+  object-fit: contain;
+  transition: transform 0.2s;
+}
+.logo:hover {
+  transform: scale(1.08) rotate(-4deg);
+}
+
+.title {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: var(--mint);
+  letter-spacing: 1px;
+  text-shadow: 0 2px 8px rgba(23, 37, 42, 0.1);
+  user-select: none;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.link {
+  color: var(--mint);
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 0.4rem 1.1rem;
+  border-radius: 20px;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+.link:hover {
+  background: var(--aqua);
+  color: var(--navy);
+  transform: translateY(-2px) scale(1.06);
+}
+
+.loginBtn {
+  border: 2px solid var(--mint);
+  padding: 0.3rem 1.5rem;
+  font-weight: 600;
+}
+.loginBtn:hover {
+  border-color: var(--navy);
+}
+
+.profileWrapper {
+  position: relative;
+}
+
+.profileBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  transition: background 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.profileBtn:hover {
+  background: var(--aqua);
+}
+
+.userInfo {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.profileIcon {
+  color: var(--mint);
+  width: 32px;
+  height: 32px;
+  transition: color 0.2s;
+}
+
+.profileImage {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--mint);
+  transition: border-color 0.2s;
+}
+
+.userName {
+  color: var(--mint);
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.profileBtn:hover .profileImage {
+  border-color: var(--navy);
+}
+
+.profileBtn:hover .userName,
+.profileBtn:hover .profileIcon {
+  color: var(--navy);
+}
+
+.dropdown {
+  position: absolute;
+  top: 120%;
+  right: 0;
+  background: var(--frost);
+  min-width: 120px;
+  box-shadow: 0 8px 24px rgba(23, 37, 42, 0.13);
+  border-radius: 10px;
+  padding: 0.5rem 0.7rem;
+  display: flex;
+  flex-direction: column;
+  animation: dropdownFadeIn 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+@keyframes dropdownFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.logoutBtn {
+  background: none;
+  border: none;
+  color: var(--teal);
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.5rem 0.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.18s, color 0.18s;
+}
+.logoutBtn:hover {
+  background: var(--mint);
+  color: var(--navy);
+}

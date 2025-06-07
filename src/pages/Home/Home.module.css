@@ -1,0 +1,129 @@
+.homeContainer {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.backgroundImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(
+    120deg,
+    rgba(23, 37, 42, 0.82) 0%,
+    rgba(42, 122, 120, 0.72) 100%
+  );
+  z-index: 1;
+  mix-blend-mode: multiply;
+}
+
+.heroSection {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  margin-left: 7vw;
+  margin-top: 13vh;
+  /* Remove card background for direct text on overlay */
+  background: none;
+  box-shadow: none;
+  border-radius: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  animation: fadeInLeft 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.title {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-bottom: 1.2rem;
+  color: var(--mint);
+  letter-spacing: 1.5px;
+  text-shadow: 0 4px 24px rgba(23, 37, 42, 0.25);
+}
+
+.title span {
+  color: var(--aqua);
+  text-shadow: 0 2px 12px rgba(58, 175, 169, 0.25);
+}
+
+.tagline {
+  font-size: 1.45rem;
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+  color: var(--frost);
+  text-shadow: 0 2px 12px rgba(23, 37, 42, 0.18);
+}
+
+.buttons {
+  display: flex;
+  gap: 1.2rem;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.buttonPrimary {
+  background: linear-gradient(90deg, var(--aqua) 0%, var(--mint) 100%);
+  color: var(--navy);
+  padding: 0.85rem 2.1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 1.15rem;
+  box-shadow: 0 2px 12px rgba(58, 175, 169, 0.13);
+  transition: background 0.3s, color 0.3s, transform 0.2s;
+}
+
+.buttonPrimary:hover {
+  background: linear-gradient(90deg, var(--teal) 0%, var(--aqua) 100%);
+  color: var(--mint);
+  transform: translateY(-2px) scale(1.04);
+}
+
+.buttonSecondary {
+  background: transparent;
+  border: 2px solid var(--mint);
+  color: var(--mint);
+  padding: 0.85rem 2.1rem;
+  font-weight: bold;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 1.15rem;
+  transition: background 0.3s, color 0.3s, border 0.3s, transform 0.2s;
+  box-shadow: 0 2px 12px rgba(222, 242, 241, 0.1);
+}
+
+.buttonSecondary:hover {
+  background: var(--navy);
+  color: var(--aqua);
+  border-color: var(--aqua);
+  transform: translateY(-2px) scale(1.04);
+}
